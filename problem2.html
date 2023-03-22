@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+<style>
+    table, td, tr{
+        border: 1px solid black;
+        border-collapse: collapse;
+        width: 30%;
+        text-align: center;
+        margin-bottom: 30px;
+}
+</style>
+</head>
+<body>
+<table id="table1">
+    <tr>
+        <td>#</td>
+        <td>Color name</td>
+        <td>Color code</td>
+    </tr>
+</table>
+<button id="check" onclick="Addcolor()">Add color</button>
+</body>
+<script>
+    function Addcolor(){
+    var o = [{
+    color: "indian red",
+    code: {
+        hex: "#B0171F"
+    },
+    id: 1
+},
+
+{
+    color: "crimson",
+    code: {
+        hex: "#DC143C"
+    },
+    id: 2
+},
+
+{
+    color: "lightpink",
+    code: {
+        hex: "#FFB6C1"
+    },
+    id: 4
+},
+
+{
+    color: "lightpink 1	",
+    code: {
+        hex: "#FFAEB9	"
+    },
+    id: 4
+},
+
+{
+    color: "lightpink 2	",
+    code: {
+        hex: "#EEA2AD	"
+    },
+    id: 5
+},
+
+{
+    color: "lightpink 3	",
+    code: {
+        hex: "#CD8C95	"
+    },
+    id: 6
+},
+
+{
+    color: "lightpink 4	 ",
+    code: {
+        hex: "#8B5F65"
+    },
+    id: 7
+},
+
+{
+    color: "pink",
+    code: {
+        hex: "#FFC0CB	"
+    },
+    id: 8
+},
+
+{
+    color: "pink 1",
+    code: {
+        hex: "#FFB5C5	"
+    },
+    id: 9
+},
+
+{
+    color: "pink 2",
+    code: {
+        hex: "#EEA9B8	"
+    },
+    id: 10
+},
+
+{
+    color: "pink 3",
+    code: {
+        hex: "#CD919E	"
+    },
+    id: 11
+},
+
+{
+    color: "pink 4",
+    code: {
+        hex: "#8B636C"
+    },
+    id: 12
+},
+
+{
+    color: "palevioletred	",
+    code: {
+        hex: "#DB7093"
+    },
+    id: 13
+},
+
+{
+    color: "palevioletred 1	",
+    code: {
+        hex: "#FF82AB"
+    },
+    id: 14
+},
+
+{
+    color: "palevioletred 2	",
+    code: {
+        hex: "#EE799F"
+    },
+    id: 15
+},
+
+{
+    color: "palevioletred 3	",
+    code: {
+        hex: "#CD6889"
+    },
+    id: 16
+},
+
+{
+    color: "palevioletred 4	",
+    code: {
+        hex: "#8B475D"
+    },
+    id: 17
+},
+
+{
+    color: "lavenderblush 1 (lavenderblush)	",
+    code: {
+        hex: "#FFF0F5"
+    },
+    id: 18
+},
+
+{
+    color: "lavenderblush 2	",
+    code: {
+        hex: "#EEE0E5"
+    },
+    id: 19
+},
+
+{
+    color: "lavenderblush 3	",
+    code: {
+    hex: "#CDC1C5"
+    },
+    id: 20
+},
+
+{
+    color: "lavenderblush 4	",
+    code: {
+        hex: "#8B8386"
+    },
+    id: 21
+},
+
+{
+    color: "violetred 1	",
+    code: {
+        hex: "#FF3E96"
+    },
+    id: 22
+},
+
+{
+    color: "violetred 2	",
+    code: {
+        hex: "#EE3A8C"
+    },
+    id: 23
+},
+
+{
+    color: "violetred 3	",
+    code: {
+        hex: "#CD3278"
+    },
+    id: 24
+},
+
+{
+    color: "violetred 4	",
+    code: {
+        hex: "#8B2252"
+    },
+    id: 25
+},
+]
+    var t = document.getElementById("table1");
+
+    for(var i=0; i<o.length; i++){
+    var tr = document.createElement("tr");
+    var td = document.createElement("td");
+    var tdText = document.createTextNode(o[i].id);
+    td.appendChild(tdText);
+    tr.appendChild(td);
+
+    var td = document.createElement("td");
+    var tdText = document.createTextNode(o[i].color);
+    td.appendChild(tdText);
+    tr.appendChild(td);
+
+    var td = document.createElement("td");
+    var tdText = document.createTextNode(o[i].code.hex);
+    td.appendChild(tdText);
+    tr.appendChild(td);
+
+    t.appendChild(tr);
+    } 
+}
+Addcolor();
+
+</script>
+</html>
