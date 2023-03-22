@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+    <link rel="stylesheet" href="cal.css">
+</head>
+<body>
+    <div id="Calculator">
+        <table id="table">
+            <form name="displayscreen">
+                <th name="text" colspan="5"><input class="textinput" placeholder="0" id="result" disabled></input></th>
+            </form>
+        <tr>
+            <td><button id="operator" onclick="plus_minus()">+/-</button></td>
+            <td><button id="operator" onclick="percentage()">%</button></td>
+            <td><button id="operator"  onclick="brackets()">( )</button></td>
+            <td><button id="operator" onclick="all_clear()">AC</button></td>
+            <td><button id="backspace_btn" onclick="backspace_remove()">&lt;</button></td>
+        </tr>
+        <tr>
+            <td><button onclick="btn_input(7)">7</button></td>
+            <td><button onclick="btn_input(8)">8</button></td>
+            <td><button onclick="btn_input(9)">9</button></td>
+            <td><button id="div_sign" value="&divide;" class="operator" onclick="btn_input('/')">&divide;</button></td>
+            <td><button id="backspace_btn" onclick="power()">x^2</button></td> 
+        </tr>
+        <tr>
+            <td><button onclick="btn_input(4)">4</button></td>
+            <td><button onclick="btn_input(5)">5</button></td>
+            <td><button onclick="btn_input(6)">6</button></td>
+            <td><button id="multi_sign" value="&times;" class="operator" onclick="btn_input('*')">&times;</button></td>
+            <td><button id="operator" onclick="square_root()">√</button></td>
+        </tr> 
+        <tr>
+            <td><button onclick="btn_input(1)">1</button></td>
+            <td><button onclick="btn_input(2)">2</button></td>
+            <td><button onclick="btn_input(3)">3</button></td>
+            <td><button value="-" class="operator" id="sub_sign" onclick="btn_input('-')">-</button></td>
+            <td rowspan="2"><button value="=" class="operator" id="equal_sign" onclick="calculate()">=</button></td>
+        </tr>
+        <tr>
+            <td><button onclick="btn_input(0)">0</button></td>
+            <td><button onclick="btn_input('00')">00</button></td>
+            <td><button id="dot" value="." onclick="btn_input('.')">.</button></td>
+            <td><button value="+" class="operator" id="sum_sign" onclick="btn_input('+')">+</button></td> 
+        </tr>   
+    </div>
+</div>    
+    <script src="cal.js"></script>
+</body>
+</html
